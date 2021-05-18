@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("data:image/png;base64,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");
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style: none;
+}
+
+
+/* navbar */
+
+.navbar {
+    border: 0px solid;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+}
+
+.navbar p {
+    width: fit-content;
+    margin: 15px auto 0 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+#nav-brand {
+    color: white;
+}
+
+
+/* anchor tag inside by sticky navbar */
+
+.nav-a {
+    /* border: 0px solid; */
+    margin-right: 4px;
+    /* margin-left: 0; */
+    margin-top: 20px;
+    width: fit-content;
+    padding: 1px 2px;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    text-decoration: underline;
+}
+
+.nav-a:hover {
+    border: 1px solid;
+    padding: 5px 1px 0 1px;
+    font-size: larger;
+    text-decoration: none;
+}
+
+
+/* customer list.css */
+
+.customer-list {
+    margin-top: 8px;
+    list-style: none;
+}
+
+h1 {
+    margin: 20px auto;
+    width: fit-content;
+}
+
+.cust-list-item {
+    border: 1px solid black;
+    margin: 5px auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* margin-bottom: 5px; */
+    min-width: fit-content;
+    font-weight: bold;
+    padding: 8px;
+    width: 50%;
+    opacity: 1;
+}
+
+.cust-list-item:hover {
+    font-size: 1.5rem;
+    /* font-weight: bold; */
+}
+
+
+/* showcustomer.css */
+
+.customer-tbl {
+    border: 0px solid inherit;
+    margin: 10px;
+}
+
+th {
+    border: 0px solid inherit;
+    padding: 5px;
+    text-align: left;
+}
+
+
+/* for that white box in which content lies */
+
+.customers-box {
+    border: 1px solid white;
+    background-color: lightseagreen;
+    width: 50%;
+    min-width: fit-content;
+    margin: 10% auto 2% auto;
+    padding: 10px;
+    line-height: 20px;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
+
+.cust-detail {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    color: white;
+    background-color: blue;
+    font-size: medium;
+    font-weight: bold;
+    padding: 3px;
+    transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+}
+
+
+/*transferScreen*/
+
+
+/* chrome, safari, etc.  to remove spin button from number input*/
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/* Firefox */
+
+input[type=number] {
+    -moz-appearance: textfield;
+    font-size: larger;
+    color: brown;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+.amt-label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.25rem;
+}
+
+.rad-in {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* reciept */
+
+.reciept-heading {
+    text-align: center;
+}
+
+.reciept-tbl {
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+    margin: 10px auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.t-data,
+.reciept-tbl th {
+    text-align: center;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar p {
+        width: fit-content;
+        margin: 0 auto 0 0;
+        font-weight: bold;
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+    }
+    #nav-a:hover {
+        border: 1px solid;
+        padding: 5px 1px 0 1px;
+        /* font-size: large; */
+        text-decoration: none;
+    }
+    .customers-box {
+        margin: 15% auto 5% auto;
+    }
+    .reciept-tbl {
+        border: 1px solid black;
+        padding: 6px;
+        border-collapse: collapse;
+        margin: 8px auto;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: small;
+    }
+}

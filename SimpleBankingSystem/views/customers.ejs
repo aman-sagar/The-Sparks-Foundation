@@ -1,0 +1,20 @@
+<%layout('layouts/boilerplate')%>
+
+    <div class="customers-box">
+        <h1>Our Customers</h1>
+        <ul class="customer-list">
+            <%customers.forEach(function(customer){%>
+
+
+                <a href="/customers/<%=customer._id%>">
+                    <li class="cust-list-item">
+                        <%=customer.fName%>&nbsp;
+                            <%=customer.lName%>
+                    </li>
+                </a>
+
+
+                <%});%>
+        </ul>
+
+    </div>

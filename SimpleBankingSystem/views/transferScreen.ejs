@@ -1,0 +1,16 @@
+<%layout('layouts/boilerplate')%>
+
+    <div class="customers-box">
+        <form action="/fundstransfer/<%=sender._id%>" method="post">
+            <label for="transferamt" class="amt-label">Amount to be transferred&nbsp;&nbsp;</label>
+            <input type="number" name="transferamt" id="transferamt" required min="1" max="50000">
+            <h4>Transfer to:</h4>
+            <%customers.forEach(function(customer){%>
+                <div class="rad-in">
+                    <input type="radio" name="transferto" id="transferto" value="<%=customer._id%>" required>
+                    <label for="transferto" class="sendto-label"><%=customer.fName%>&nbsp;<%=customer.lName%></label>
+                    <%})%>
+                </div>
+                <button type="submit">Send</button>
+        </form>
+    </div>

@@ -1,0 +1,32 @@
+<%layout('layouts/boilerplate')%>
+    <div class="customers-box">
+        <h2 class="reciept-heading">
+            <%=sender.fName%>'s&nbsp;Transaction Reciept
+        </h2>
+        <table class="reciept-tbl">
+            <thead>
+                <th>
+                    TransactionID
+                </th>
+                <th>Sent to</th>
+                <th>Transfer Amount</th>
+                <th>Remaining Balance</th>
+            </thead>
+            <tr>
+                <td class="t-data">
+                    <%=transaction._id%>
+                </td>
+                <td class="t-data">
+                    <%=reciever.fName%>&nbsp;
+                        <%=reciever.lName%>
+                </td>
+                <td class="t-data">
+                    <%=transaction.transferamt%>
+                </td>
+                <td class="t-data">
+                    <%=sender.balance%>
+                </td>
+            </tr>
+        </table>
+        <a href="/customers/<%=sender._id%>"><button>Return to Customer Page</button></a>
+    </div>

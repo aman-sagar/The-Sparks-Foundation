@@ -1,0 +1,51 @@
+<%layout('layouts/boilerplate')%>
+    <div class="customers-box">
+        <h1>
+            All Transactions
+        </h1>
+
+        <table class="reciept-tbl">
+            <thead>
+                <th>Transaction Id</th>
+                <th>Sender's Name</th>
+                <th>Reciever's Name</th>
+                <th>Amount Sent</th>
+            </thead>
+            <%transactions.docs.forEach(function(transaction){%>
+                <tr>
+                    <td class="t-data">
+                        <%=transaction._id%>
+                    </td>
+                    <td class="t-data">
+                        <a href="/customers/<%=transaction.sender._id%>">
+                            <%=transaction.sender.fName%>&nbsp;
+                                <%=transaction.sender.lName%>
+                        </a>
+
+                    </td>
+                    <td class="t-data">
+                        <a href="/customers/<%=transaction.reciever._id%>">
+                            <%=transaction.reciever.fName%>&nbsp;
+                                <%=transaction.reciever.lName%>
+                        </a>
+
+                    </td>
+                    <td class="t-data">
+                        <%=transaction.transferamt%>
+                    </td>
+                </tr>
+                <%});%>
+        </table>
+        <%if(transactions.totalPages>1){%>
+
+            <%transactions.page = Number(transactions.page)%>
+                <%if(transactions.page-1){%>
+                    <a href="/transactions?page=<%=transactions.page-1%>"><button>Prev</button></a>
+                    <%}%>
+
+                        <%if((transactions.page+1)<=transactions.totalPages){%>
+                            <a href="/transactions?page=<%=transactions.page+1%>"><button>Next</button></a>
+                            <%}%>
+
+                                <%}%>
+    </div>
